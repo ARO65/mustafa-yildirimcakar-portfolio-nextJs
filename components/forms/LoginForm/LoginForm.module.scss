@@ -1,0 +1,24 @@
+@use "../../../styles/variables" as *;
+.form {
+  display: grid;
+  gap: 1.15rem;
+}
+.message {
+  margin: 0;
+  color: #b42318;
+}
+.submit {
+  min-height: 3.1rem;
+  padding: 0.8rem 1.25rem;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  background: $blue;
+  color: white;
+}
+.submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}

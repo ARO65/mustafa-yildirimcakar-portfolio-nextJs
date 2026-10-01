@@ -1,0 +1,11 @@
+@use "../../../styles/variables" as *;
+.form {
+  display: grid;
+  gap: 1.15rem;
+}
+.form small {
+  color: #b42318;
+}
+.form button {
+  border-radius: 10px;
+}

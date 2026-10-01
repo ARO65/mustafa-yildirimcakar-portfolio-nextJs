@@ -1,0 +1,157 @@
+@use "../../../styles/variables" as *;
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 610px;
+  margin-top: 1rem;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(8, 124, 240, 0.38),
+      transparent 28%
+    ),
+    linear-gradient(115deg, #061522 0%, #0a2a43 58%, #0b4167 100%);
+  color: white;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  padding: 4.5rem 3.2rem;
+  box-shadow: $shadow;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -42% 34%;
+  height: 80%;
+  background: linear-gradient(
+    140deg,
+    transparent 20%,
+    rgba(57, 160, 255, 0.16)
+  );
+  transform: skewY(-12deg);
+  z-index: -1;
+}
+.content {
+  max-width: 690px;
+}
+.eyebrow {
+  color: $blue-2;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+}
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  margin: 1.2rem 0 0.6rem;
+}
+.hero h1 small {
+  font-size: 0.36em;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.55rem;
+}
+.hero h1 span {
+  color: $blue-2;
+}
+.hero h2 {
+  font-size: 1.4rem;
+  margin: 0.8rem 0;
+  font-weight: 600;
+}
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: $dark-muted;
+  max-width: 650px;
+}
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  margin: 2rem 0;
+}
+.contact {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 0.88rem 1.2rem;
+  border: 1px solid $dark-line;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.stack {
+  padding-top: 1.5rem;
+  border-top: 1px solid $dark-line;
+  color: $dark-muted;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+}
+.stack span {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.visual {
+  display: grid;
+  place-items: center;
+}
+.codeCard {
+  width: min(330px, 100%);
+  aspect-ratio: 1/0.92;
+  border: 1px solid $dark-line;
+  border-radius: 28px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotate(3deg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+.codeCard span {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.codeCard strong {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin: 1.2rem 0;
+}
+.codeCard code {
+  color: $blue-2;
+}
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 3.2rem 2rem;
+  }
+  .visual {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .hero {
+    padding: 2.8rem 1.25rem;
+    min-height: 560px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .actions a {
+    justify-content: center;
+  }
+}

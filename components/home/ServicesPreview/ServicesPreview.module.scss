@@ -1,0 +1,49 @@
+@use "../../../styles/variables" as *;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.grid article {
+  padding: 1.6rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $surface;
+  box-shadow: $shadow;
+}
+.icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #eaf4ff;
+  color: $blue;
+  border-radius: 12px;
+  font-size: 1.25rem;
+}
+.grid h3 {
+  margin: 1.2rem 0 0.6rem;
+}
+.grid p {
+  color: $muted;
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+.grid a {
+  color: $blue;
+  font-weight: 800;
+  font-size: 0.84rem;
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

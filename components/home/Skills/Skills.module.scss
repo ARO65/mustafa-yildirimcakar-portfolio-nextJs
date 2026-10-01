@@ -1,0 +1,30 @@
+@use "../../../styles/variables" as *;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.grid article {
+  padding: 2rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $surface;
+  box-shadow: $shadow;
+}
+.grid div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.grid span {
+  padding: 0.45rem 0.7rem;
+  background: #f1f5f9;
+  border-radius: 999px;
+  color: $muted;
+  font-size: 0.85rem;
+}
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

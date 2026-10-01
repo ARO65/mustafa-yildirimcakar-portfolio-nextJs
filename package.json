@@ -1,0 +1,25 @@
+{
+  "name": "mustafa-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/core": "latest",
+    "bootstrap": "^5.3.8",
+    "jose": "latest",
+    "next": "latest",
+    "next-auth": "beta",
+    "primeicons": "^8.0.2",
+    "react": "latest",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "latest",
+    "sass": "latest",
+    "sweetalert2": "^11.26.25",
+    "yup": "latest"
+  }
+}

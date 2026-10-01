@@ -1,0 +1,223 @@
+@use "./reset";
+@use "./variables" as *;
+@use "./typography";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: $paper;
+  color: $text;
+  font-family: Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.container {
+  width: min(1220px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+main {
+  min-height: 72vh;
+}
+.section {
+  padding: $space-section 0;
+}
+.page {
+  padding: 4.5rem 0;
+}
+.sectionHeading,
+.pageIntro {
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+}
+.sectionHeading > p,
+.pageIntro > p:first-child,
+.caseHero > p:first-child,
+.cta > p {
+  color: $blue;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+.sectionHeading h2,
+.pageIntro h1,
+.cta h2 {
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+  margin: 0.7rem 0;
+}
+.pageIntro > p:last-child,
+.caseHero > p:last-child {
+  color: $muted;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+.button {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: center;
+  background: $blue;
+  color: white !important;
+  padding: 0.88rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid $blue;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(8, 124, 240, 0.18);
+}
+.button.secondary {
+  background: transparent;
+  color: inherit !important;
+  border-color: $line;
+  box-shadow: none;
+}
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.contentGrid,
+.caseGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+.contentGrid > article,
+.contentGrid > aside,
+.caseGrid > article,
+.caseGrid > aside,
+.formShell,
+.panel {
+  padding: 2rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $surface;
+  box-shadow: $shadow;
+}
+.contentGrid p,
+.caseGrid p {
+  color: $muted;
+  line-height: 1.8;
+}
+.serviceList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.serviceList article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $surface;
+  box-shadow: $shadow;
+}
+.serviceList article > span {
+  color: $blue;
+  font-weight: 800;
+}
+.serviceList p,
+.serviceList li {
+  color: $muted;
+  line-height: 1.7;
+}
+.cta {
+  margin: 3rem 0 5rem;
+  padding: 4rem;
+  border-radius: 26px;
+  background: $navy;
+  color: $dark-text;
+  box-shadow: $shadow;
+}
+.cta > p {
+  color: $blue-2;
+}
+.cta .button {
+  margin-top: 1rem;
+}
+.caseStudy {
+  padding: 5rem 0;
+}
+.caseHero {
+  padding: 4rem 0;
+  max-width: 900px;
+}
+.caseHero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  margin: 1rem 0;
+}
+.caseGrid li {
+  margin: 0.8rem 0;
+}
+.pill {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid $line;
+  border-radius: 999px;
+  color: $muted;
+  background: $surface;
+}
+.caseGrid aside .button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.panel p {
+  color: $muted;
+}
+.formShell {
+  max-width: 760px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid $blue;
+  outline-offset: 3px;
+}
+@media (max-width: 850px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contentGrid,
+  .caseGrid {
+    grid-template-columns: 1fr;
+  }
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  .serviceList {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+  .section,
+  .page {
+    padding: 3.5rem 0;
+  }
+  .cta {
+    padding: 2rem;
+  }
+  .container {
+    width: min(100% - 1.2rem, 1220px);
+  }
+}

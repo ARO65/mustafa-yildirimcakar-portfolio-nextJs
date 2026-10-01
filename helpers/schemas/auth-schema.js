@@ -1,0 +1,10 @@
+import * as Yup from "yup";
+
+export const AuthSchema = Yup.object({
+  email: Yup.string()
+    .email("Enter a valid email address")
+    .required("Email is required"),
+  password: Yup.string()
+    .min(8, "Password must contain at least 8 characters")
+    .required("Password is required"),
+});

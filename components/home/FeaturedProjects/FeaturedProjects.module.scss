@@ -1,0 +1,13 @@
+.wrap {
+  overflow: hidden;
+}
+.item {
+  padding: 0.5rem;
+  height: 100%;
+}
+:global(.p-carousel-item) {
+  display: flex;
+}
+:global(.p-carousel-content) {
+  gap: 0.5rem;
+}

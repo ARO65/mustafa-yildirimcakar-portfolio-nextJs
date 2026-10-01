@@ -1,0 +1,95 @@
+@use "../../../styles/variables" as *;
+.card {
+  height: 100%;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $surface;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow;
+  transition: 0.22s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 55px rgba(8, 33, 56, 0.14);
+}
+.preview {
+  min-height: 155px;
+  background: linear-gradient(135deg, $navy, #0c4975);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.preview i {
+  font-size: 2.2rem;
+  color: $blue-2;
+}
+.preview span {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $dark-muted;
+}
+.body {
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: $blue;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.meta span {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.card h3 {
+  font-size: 1.35rem;
+  margin: 1rem 0 0.55rem;
+}
+.card p {
+  color: $muted;
+  line-height: 1.6;
+  flex: 1;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+}
+.tags span {
+  font-size: 0.72rem;
+  background: #f1f5f9;
+  padding: 0.32rem 0.55rem;
+  border-radius: 999px;
+  color: #526274;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $line;
+}
+.links a {
+  font-size: 0.84rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.links a:first-child {
+  color: $blue;
+}

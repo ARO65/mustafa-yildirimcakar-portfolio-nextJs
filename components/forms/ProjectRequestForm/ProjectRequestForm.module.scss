@@ -1,0 +1,18 @@
+@use "../../../styles/variables" as *;
+.form {
+  display: grid;
+  gap: 1.15rem;
+  max-width: 720px;
+}
+.form button {
+  padding: 0.9rem 1.2rem;
+  border: 0;
+  border-radius: 10px;
+  background: $blue;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+.form button:disabled {
+  opacity: 0.6;
+}

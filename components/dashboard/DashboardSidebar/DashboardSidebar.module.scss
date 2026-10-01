@@ -1,0 +1,65 @@
+@use "../../../styles/variables" as *;
+.side {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  padding: 0.65rem 0.8rem;
+  background: $navy;
+  color: white;
+  border-radius: 14px;
+  margin: 1.2rem 0;
+  box-shadow: $shadow;
+}
+.side strong {
+  margin-right: auto;
+  padding: 0.55rem;
+}
+.side a,
+.mobileLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $dark-muted;
+  padding: 0.7rem 0.8rem;
+  border-radius: 9px;
+  font-size: 0.88rem;
+}
+.side a:hover,
+.mobileLinks a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+.mobileTrigger {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 10px;
+  background: $navy;
+  color: white;
+}
+.offcanvas {
+  background: $navy !important;
+  color: $dark-text !important;
+}
+.offcanvas :global(.btn-close) {
+  filter: invert(1);
+}
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.mobileLinks a {
+  padding: 0.9rem;
+}
+@media (max-width: 760px) {
+  .side {
+    display: none;
+  }
+  .mobileTrigger {
+    display: inline-flex;
+  }
+}
